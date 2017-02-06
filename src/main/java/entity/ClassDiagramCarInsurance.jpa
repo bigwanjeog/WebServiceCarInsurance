@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="entity" v="3.0" sm="false" xs="false" id="_148584827061893" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="UtilisateurPK" abs="false" class="Utilisateur" v="true" minimized="false" rootElement="_148584827061893" id="_1485848297011">
+        <jpa:ts e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="nom" id="_1485848338095109">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="prenom" id="_1485848346377110">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="adresse" id="_1485848346937111">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="ville" id="_1485848350345112">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="cp" id="_1485848350848113">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="dateNaissance" id="_1485848351393114">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="email" id="_1485848351977115">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="password" id="_1485848352625116">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="fonction" id="_1485848353217117">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="double" v="true" name="prix" id="_1485848353801118">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1485848298942" v="true" name="voiture" id="_1485848511985124">
+                <jpa:bv/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1485848297011101">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Utilisateur.findAll">
+            <jpa:query>Select e from Utilisateur e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByNom">
+            <jpa:query>Select u from Utilisateur u where u.nom=:nom</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByPrenom">
+            <jpa:query>Select u from Utilisateur u where u.prenom=:prenom</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByAdresse">
+            <jpa:query>Select u from Utilisateur u where u.adresse=:adresse</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByVille">
+            <jpa:query>Select u from Utilisateur u where u.ville=:ville</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByCp">
+            <jpa:query>Select u from Utilisateur u where u.cp=:cp</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByDateNaissance">
+            <jpa:query>Select u from Utilisateur u where u.dateNaissance=:dateNaissance</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByEmail">
+            <jpa:query>Select u from Utilisateur u where u.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByPassword">
+            <jpa:query>Select u from Utilisateur u where u.password=:password</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByFonction">
+            <jpa:query>Select u from Utilisateur u where u.fonction=:fonction</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Utilisateur.findByPrix">
+            <jpa:query>Select u from Utilisateur u where u.prix=:prix</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="VoiturePK" abs="false" class="Voiture" v="true" minimized="false" rootElement="_148584827061893" id="_1485848298942">
+        <jpa:ts e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="annee" id="_1485848411353119">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="chevaux" id="_1485848411953120">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="carburant" id="_1485848412520121">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1485848301150" v="true" name="modele" id="_1485848518785125">
+                <jpa:bv/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1485848298942103">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Voiture.findAll">
+            <jpa:query>Select e from Voiture e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Voiture.findByAnnee">
+            <jpa:query>Select v from Voiture v where v.annee=:annee</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Voiture.findByChevaux">
+            <jpa:query>Select v from Voiture v where v.chevaux=:chevaux</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Voiture.findByCarburant">
+            <jpa:query>Select v from Voiture v where v.carburant=:carburant</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ModelePK" abs="false" class="Modele" v="true" minimized="false" rootElement="_148584827061893" id="_1485848301150">
+        <jpa:ts e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="nom" id="_1485848419097122">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1485848302798" v="true" name="constructeur" id="_1485848525425126">
+                <jpa:bv/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1485848301150105">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Modele.findAll">
+            <jpa:query>Select e from Modele e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Modele.findByNom">
+            <jpa:query>Select m from Modele m where m.nom=:nom</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ConstructeurPK" abs="false" class="Constructeur" v="true" minimized="false" rootElement="_148584827061893" id="_1485848302798">
+        <jpa:ts e="true"/>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="nom" id="_1485848421881123">
+                <jpa:bv/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_1485848302798107">
+                <jpa:bv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Constructeur.findAll">
+            <jpa:query>Select e from Constructeur e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Constructeur.findByNom">
+            <jpa:query>Select c from Constructeur c where c.nom=:nom</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the JPA Modeler
+ */</jpa:snp>
+    <jpa:inf e="true" n="java.io.Serializable"/>
+    <jpa:diagram>
+        <plane elementRef="_148584827061893">
+            <shape elementRef="_1485848297011">
+                <Bounds x="141.0" y="179.0" width="154.0" height="315.0"/>
+            </shape>
+            <shape elementRef="_1485848298942">
+                <Bounds x="392.0" y="179.0" width="137.0" height="168.0"/>
+            </shape>
+            <shape elementRef="_1485848301150">
+                <Bounds x="628.0" y="179.0" width="137.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1485848302798">
+                <Bounds x="611.0" y="368.0" width="171.0" height="92.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
